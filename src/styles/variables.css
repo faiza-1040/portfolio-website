@@ -1,0 +1,107 @@
+/* ============================================
+   DESIGN TOKENS v4 — Unified Premium System
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root {
+  /* ── Core Background — Off-White Premium ── */
+  --bg-primary:      #FAF8F5;
+  --bg-secondary:    #F2EFE9;
+  --bg-elevated:     #EAE6DF;
+  --bg-card:         rgba(255, 255, 255, 0.9);
+  --bg-card-hover:   rgba(255, 255, 255, 1);
+  --bg-nav:          rgba(250, 248, 245, 0.88);
+
+  /* ── Accent — Mustard Yellow (Primary) ── */
+  --accent:          #F7B928;
+  --accent-dim:      rgba(247, 185, 40, 0.08);
+  --accent-border:   rgba(247, 185, 40, 0.25);
+
+  /* ── Secondary Accents ── */
+  --color-red:       #FF4F6D;
+  --color-black:     #1a1a1a;
+  --color-offwhite:  #FAF8F5;
+
+  /* ── Soft secondary accents (used in tags, dots) ── */
+  --soft-purple:     #8e7cc3;
+  --soft-blue:       #3a9bd5;
+  --soft-rose:       #FF4F6D;
+  --soft-sage:       #22c55e;
+
+  /* ── Text ── */
+  --text-primary:    #1a1a1a;
+  --text-secondary:  #5a5652;
+  --text-muted:      #9c9794;
+  --text-accent:     #F7B928;
+
+  /* ── Borders ── */
+  --border-subtle:   rgba(26, 26, 26, 0.05);
+  --border-card:     rgba(26, 26, 26, 0.08);
+  --border-hover:    rgba(247, 185, 40, 0.3);
+
+  /* ── Shadows ── */
+  --shadow-sm:       0 2px 8px rgba(26, 26, 26, 0.04);
+  --shadow-md:       0 8px 24px rgba(26, 26, 26, 0.07);
+  --shadow-lg:       0 16px 48px rgba(26, 26, 26, 0.09);
+  --shadow-accent:   0 0 30px rgba(247, 185, 40, 0.08);
+
+  /* ── Gradients ── */
+  --gradient-card:   linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+  --gradient-hero:   radial-gradient(ellipse at 60% 0%, rgba(247,185,40,0.06) 0%, transparent 60%);
+
+  /* ── Transitions ── */
+  --ease-out-expo:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:     cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast:   0.2s var(--ease-in-out);
+  --transition-normal: 0.35s var(--ease-out-expo);
+  --transition-slow:   0.8s var(--ease-out-expo);
+
+  /* ── Spacing ── */
+  --section-padding:   100px 0;
+  --container-max:     1200px;
+  --container-padding: 0 32px;
+
+  /* ── Layout ── */
+  --nav-height:    90px;
+  --radius-sm:     8px;
+  --radius-md:     14px;
+  --radius-lg:     18px;
+  --radius-xl:     24px;
+  --radius-full:   9999px;
+
+  /* ── Fonts ── */
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'Plus Jakarta Sans', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+/* ── Dark Mode ── */
+[data-theme="dark"] {
+  --bg-primary:    #161519;
+  --bg-secondary:  #1d1b22;
+  --bg-elevated:   #27242e;
+  --bg-card:       rgba(39, 36, 46, 0.7);
+  --bg-card-hover: rgba(39, 36, 46, 0.95);
+  --bg-nav:        rgba(22, 21, 25, 0.9);
+
+  --text-primary:   #eae6f0;
+  --text-secondary: #a9a2b5;
+  --text-muted:     #706a7c;
+  --text-accent:    #F7B928;
+
+  --border-subtle:  rgba(255, 255, 255, 0.05);
+  --border-card:    rgba(255, 255, 255, 0.08);
+  --border-hover:   rgba(247, 185, 40, 0.25);
+
+  --accent:         #F7B928;
+  --accent-dim:     rgba(247, 185, 40, 0.1);
+  --accent-border:  rgba(247, 185, 40, 0.2);
+
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.2);
+  --shadow-md:  0 8px 24px rgba(0,0,0,0.3);
+  --shadow-lg:  0 16px 48px rgba(0,0,0,0.4);
+
+  --gradient-card:  linear-gradient(135deg, rgba(39, 36, 46, 0.8) 0%, rgba(29, 27, 34, 0.5) 100%);
+  --gradient-hero:  radial-gradient(ellipse at 60% 0%, rgba(247,185,40,0.04) 0%, transparent 60%);
+}

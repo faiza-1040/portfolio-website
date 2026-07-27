@@ -1,0 +1,177 @@
+/* ── EXPERIENCE PAGE — Unified Design ── */
+
+.experience-page { background: #FAF8F5; }
+[data-theme="dark"] .experience-page { background: var(--bg-primary); }
+
+/* Experience timeline */
+.exp-timeline { display: flex; flex-direction: column; gap: 0; max-width: 820px; margin: 0 auto; }
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.exp-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.exp-dot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 2.5px solid rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  z-index: 1;
+  transition: all var(--transition-fast);
+}
+
+.exp-dot-teal     { background: #22c55e;  border-color: #22c55e; }
+.exp-dot-lavender { background: #8e7cc3;  border-color: #8e7cc3; }
+.exp-dot-blue     { background: #3a9bd5;  border-color: #3a9bd5; }
+
+.exp-line {
+  width: 1.5px;
+  flex: 1;
+  min-height: 40px;
+  background: rgba(0,0,0,0.07);
+  margin-top: 8px;
+}
+[data-theme="dark"] .exp-line { background: rgba(255,255,255,0.07); }
+
+.exp-card {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px 32px;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.exp-company-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  background: rgba(247,185,40,0.08);
+  color: #8a6510;
+  border: 1px solid rgba(247,185,40,0.2);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  width: fit-content;
+  margin-bottom: 5px;
+}
+[data-theme="dark"] .exp-company-badge {
+  color: #F7B928;
+  background: rgba(247,185,40,0.1);
+  border-color: rgba(247,185,40,0.25);
+}
+
+.exp-role {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+[data-theme="dark"] .exp-role { color: var(--text-primary); }
+
+.exp-company  { font-size: 0.88rem; color: var(--text-secondary); margin-top: 3px; font-family: var(--font-body); }
+.exp-meta     { display: flex; flex-direction: column; gap: 4px; text-align: right; flex-shrink: 0; }
+.exp-duration { font-family: var(--font-mono); font-size: 0.75rem; color: #F7B928; letter-spacing: 0.04em; font-weight: 600; }
+.exp-location { font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-body); }
+
+.exp-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  font-family: var(--font-body);
+}
+
+.exp-section-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.exp-resp-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 5px;
+  font-family: var(--font-body);
+}
+
+.exp-bullet { color: #F7B928; flex-shrink: 0; font-weight: 700; }
+
+.exp-tech-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* Education section (condensed cards) */
+.exp-edu-section { background: var(--bg-secondary); }
+
+.edu-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.edu-mini-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 24px;
+}
+
+.edu-icon-big { font-size: 2rem; flex-shrink: 0; }
+
+.edu-mini-content { display: flex; flex-direction: column; gap: 4px; }
+
+.edu-mini-duration {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+
+.edu-mini-degree {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+  margin-top: 4px;
+}
+[data-theme="dark"] .edu-mini-degree { color: var(--text-primary); }
+
+.edu-mini-inst {
+  font-size: 0.82rem;
+  color: #F7B928;
+  font-weight: 600;
+  font-family: var(--font-body);
+}
+
+@media (max-width: 768px) {
+  .exp-item { grid-template-columns: 36px 1fr; gap: 16px; }
+  .exp-card { padding: 20px; }
+  .edu-cards-grid { grid-template-columns: 1fr; }
+}
